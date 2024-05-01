@@ -1,0 +1,67 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<nav
+    class="flex flex-col items-center justify-between w-full text-center md:flex-row"
+>
+    <HeaderButton class="text-white" href="/">
+        <svg
+            slot="before"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+                d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"
+            ></path>
+            <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"></path>
+            <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        </svg>
+        Últimos lanzamientos
+    </HeaderButton>
+    <HeaderButton class="text-white" href="/about">
+        <svg
+            slot="before"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+            <path d="M12 9h.01"></path>
+            <path d="M11 12h1v4h1"></path>
+        </svg>a Sobre el proyecto
+    </HeaderButton>
+    <HeaderButton class="text-white" href="/oldest">
+        <svg
+            slot="before"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+            <path d="M12 7v5"></path>
+            <path d="M12 12l2 -3"></path>
+        </svg>
+
+        Los más viejos
+    </HeaderButton>
+</nav>
