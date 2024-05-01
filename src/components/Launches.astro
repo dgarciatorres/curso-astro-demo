@@ -1,24 +1,7 @@
 ---
-import { options } from "@astrojs/check/dist/options"
-import { type APISpaceXRespose} from   '../type/api'
-import CardLaunch from "../components/CardLaunch.astro"
-
-    // se piuede ejecutar el js que queramos
-
-    const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            options: {
-                limit: 12,
-            },
-        }),
-    })
-
-    // const data = JSON.stringify(await res.json())
-    const {docs : launches}  = (await res.json()) as APISpaceXRespose
+import CardLaunch from "./CardLaunch.astro"
+import { getLatestLaunches } from "../services/spacex"
+const launches = await getLatestLaunches()
 
 ---
 
